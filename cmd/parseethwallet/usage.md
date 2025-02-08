@@ -3,7 +3,7 @@ This function can take a geth style wallet file and extract the private key as h
 This command takes the private key and imports it into a local keystore with no password.
 
 ```bash
-$ polycli parseethwallet --hexkey 42b6e34dc21598a807dc19d7784c71b2a7a01f6480dc6f58258f78e539f1a1fa
+$ dxpcli parseethwallet --hexkey 42b6e34dc21598a807dc19d7784c71b2a7a01f6480dc6f58258f78e539f1a1fa
 
 $ cat UTC--2023-05-09T22-48-57.582848385Z--85da99c8a7c2c95964c8efd687e95e632fc533d6  | jq '.'
 {
@@ -32,7 +32,7 @@ $ cat UTC--2023-05-09T22-48-57.582848385Z--85da99c8a7c2c95964c8efd687e95e632fc53
 If we wanted to go the opposite direction, we could run a command like this.
 
 ```bash
-polycli parseethwallet --file /tmp/keystore/UTC--2023-05-09T22-48-57.582848385Z--85da99c8a7c2c95964c8efd687e95e632fc533d6  | jq '.'
+dxpcli parseethwallet --file /tmp/keystore/UTC--2023-05-09T22-48-57.582848385Z--85da99c8a7c2c95964c8efd687e95e632fc533d6  | jq '.'
 {
   "Address": "0x85da99c8a7c2c95964c8efd687e95e632fc533d6",
   "PublicKey": "507cf9a75e053cda6922467721ddb10412da9bec30620347d9529cc77fca24334a4cf59685be4a2fdeabf4e7753350e42d2d3a20250fd9dc554d226463c8a3d5",

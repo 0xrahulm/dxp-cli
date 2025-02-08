@@ -3,7 +3,7 @@ This function is meant to help handle ENR data. Given an input ENR it will outpu
 The command below will take an ENR and process it:
 ```bash
 echo 'enr:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrdvJjX04jRzjzCBOonrkTfj499SZuOh8R33Ls8RRcy5wBgmlkgnY0gmlwhH8AAAGJc2VjcDI1NmsxoQPKY0yuDUmstAHYpMa2_oxVtw0RW_QAdpzBQA8yWM0xOIN1ZHCCdl8' | \
-    polycli enr | jq '.'
+    dxpcli enr | jq '.'
 ```
 
 This is the output:
@@ -23,15 +23,15 @@ This command can be used a few different ways
 enr_data="enr:-IS4QHCYrYZbAKWCBRlAy5zzaDZXJBGkcnh4MHcBFZntXNFrdvJjX04jRzjzCBOonrkTfj499SZuOh8R33Ls8RRcy5wBgmlkgnY0gmlwhH8AAAGJc2VjcDI1NmsxoQPKY0yuDUmstAHYpMa2_oxVtw0RW_QAdpzBQA8yWM0xOIN1ZHCCdl8"
 
 # First form - reading from stdin
-echo "$enr_data" | polycli enr
+echo "$enr_data" | dxpcli enr
 
 # Second form - reading from file
 tmp_file="$(mktemp)"
 echo "$enr_data" > "$tmp_file" 
-polycli enr --file "$tmp_file"
+dxpcli enr --file "$tmp_file"
 
 # Third form - command line args
-polycli enr "$enr_data" 
+dxpcli enr "$enr_data" 
 ```
 
 All three forms support multiple lines. Each line will be convert into a JSON object and printed.

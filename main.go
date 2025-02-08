@@ -1,6 +1,6 @@
 package main
 
-import "github.com/0xPolygon/polygon-cli/cmd"
+import "github.com/0xrahulm/dxp-cli/cmd"
 
 func main() {
 	cmd.Execute()

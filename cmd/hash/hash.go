@@ -244,7 +244,7 @@ func Uint64ArrayToBytes(arr [4]uint64) []byte {
 	buf := new(bytes.Buffer)
 	for k := range arr {
 		// this serialization seems a little weird, but it matches the values from erigion as far as I can tell.
-		// echo -n "0000" | xxd -r -p | ./out/polycli hash poseidongold
+		// echo -n "0000" | xxd -r -p | ./out/dxpcli hash poseidongold
 		// This returns
 		// c71603f33a1144ca7953db0ab48808f4c4055e3364a246c33c18a9786cb0b359
 		// which matches

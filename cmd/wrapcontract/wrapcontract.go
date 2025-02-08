@@ -8,7 +8,7 @@ import (
 	"strings"
 	"encoding/json"
 
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/util"
 	"github.com/spf13/cobra"
 )
 

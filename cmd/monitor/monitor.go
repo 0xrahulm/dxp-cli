@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/util"
 	lru "github.com/hashicorp/golang-lru"
 
 	_ "embed"
@@ -18,9 +18,9 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/0xPolygon/polygon-cli/cmd/monitor/ui"
-	"github.com/0xPolygon/polygon-cli/metrics"
-	"github.com/0xPolygon/polygon-cli/rpctypes"
+	"github.com/0xrahulm/dxp-cli/cmd/monitor/ui"
+	"github.com/0xrahulm/dxp-cli/metrics"
+	"github.com/0xrahulm/dxp-cli/rpctypes"
 	"github.com/cenkalti/backoff/v4"
 	termui "github.com/gizak/termui/v3"
 	"github.com/rs/zerolog/log"

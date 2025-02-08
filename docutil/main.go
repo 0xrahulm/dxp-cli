@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/0xPolygon/polygon-cli/cmd"
+	"github.com/0xrahulm/dxp-cli/cmd"
 )
 
 var (
@@ -16,17 +16,17 @@ var (
 )
 
 func main() {
-	polycli := cmd.NewPolycliCommand()
+	dxpcli := cmd.NewDxpcliCommand()
 
-	// Generate documentation for the `polycli` command.
-	if err := genMarkdownDoc(polycli, docDir); err != nil {
+	// Generate documentation for the `dxpcli` command.
+	if err := genMarkdownDoc(dxpcli, docDir); err != nil {
 		fmt.Println("Unable to generate documentation.")
 		log.Fatal(err)
 	}
 	fmt.Println("Documentation generated!")
 
 	// Update the summary of commands in the `README.md` (located inside <tag></tag>)
-	if err := updateReadmeCommands(polycli, delimiter, docDir); err != nil {
+	if err := updateReadmeCommands(dxpcli, delimiter, docDir); err != nil {
 		fmt.Println("Unable to update `README.md`.")
 		log.Fatal(err)
 	}

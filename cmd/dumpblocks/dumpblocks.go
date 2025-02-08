@@ -13,9 +13,9 @@ import (
 	_ "embed"
 
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
-	"github.com/0xPolygon/polygon-cli/proto/gen/pb"
-	"github.com/0xPolygon/polygon-cli/rpctypes"
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/proto/gen/pb"
+	"github.com/0xrahulm/dxp-cli/rpctypes"
+	"github.com/0xrahulm/dxp-cli/util"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"golang.org/x/exp/slices"

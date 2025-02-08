@@ -2,35 +2,35 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/0xPolygon/polygon-cli/cmd/retest"
-	"github.com/0xPolygon/polygon-cli/cmd/ulxly"
+	"github.com/0xrahulm/dxp-cli/cmd/retest"
+	"github.com/0xrahulm/dxp-cli/cmd/ulxly"
 	"os"
 
-	"github.com/0xPolygon/polygon-cli/cmd/fork"
-	"github.com/0xPolygon/polygon-cli/cmd/p2p"
-	"github.com/0xPolygon/polygon-cli/cmd/parseethwallet"
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/cmd/fork"
+	"github.com/0xrahulm/dxp-cli/cmd/p2p"
+	"github.com/0xrahulm/dxp-cli/cmd/parseethwallet"
+	"github.com/0xrahulm/dxp-cli/util"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/0xPolygon/polygon-cli/cmd/abi"
-	"github.com/0xPolygon/polygon-cli/cmd/dbbench"
-	"github.com/0xPolygon/polygon-cli/cmd/dumpblocks"
-	"github.com/0xPolygon/polygon-cli/cmd/ecrecover"
-	"github.com/0xPolygon/polygon-cli/cmd/enr"
-	"github.com/0xPolygon/polygon-cli/cmd/fund"
-	"github.com/0xPolygon/polygon-cli/cmd/hash"
-	"github.com/0xPolygon/polygon-cli/cmd/loadtest"
-	"github.com/0xPolygon/polygon-cli/cmd/metricsToDash"
-	"github.com/0xPolygon/polygon-cli/cmd/mnemonic"
-	"github.com/0xPolygon/polygon-cli/cmd/monitor"
-	"github.com/0xPolygon/polygon-cli/cmd/nodekey"
-	"github.com/0xPolygon/polygon-cli/cmd/rpcfuzz"
-	"github.com/0xPolygon/polygon-cli/cmd/signer"
-	"github.com/0xPolygon/polygon-cli/cmd/version"
-	"github.com/0xPolygon/polygon-cli/cmd/wallet"
-	"github.com/0xPolygon/polygon-cli/cmd/wrapcontract"
+	"github.com/0xrahulm/dxp-cli/cmd/abi"
+	"github.com/0xrahulm/dxp-cli/cmd/dbbench"
+	"github.com/0xrahulm/dxp-cli/cmd/dumpblocks"
+	"github.com/0xrahulm/dxp-cli/cmd/ecrecover"
+	"github.com/0xrahulm/dxp-cli/cmd/enr"
+	"github.com/0xrahulm/dxp-cli/cmd/fund"
+	"github.com/0xrahulm/dxp-cli/cmd/hash"
+	"github.com/0xrahulm/dxp-cli/cmd/loadtest"
+	"github.com/0xrahulm/dxp-cli/cmd/metricsToDash"
+	"github.com/0xrahulm/dxp-cli/cmd/mnemonic"
+	"github.com/0xrahulm/dxp-cli/cmd/monitor"
+	"github.com/0xrahulm/dxp-cli/cmd/nodekey"
+	"github.com/0xrahulm/dxp-cli/cmd/rpcfuzz"
+	"github.com/0xrahulm/dxp-cli/cmd/signer"
+	"github.com/0xrahulm/dxp-cli/cmd/version"
+	"github.com/0xrahulm/dxp-cli/cmd/wallet"
+	"github.com/0xrahulm/dxp-cli/cmd/wrapcontract"
 )
 
 var (
@@ -53,7 +53,7 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd = NewPolycliCommand()
+	rootCmd = NewDxpcliCommand()
 }
 
 // initConfig reads in config file and ENV variables if set.
@@ -66,10 +66,10 @@ func initConfig() {
 		home, err := os.UserHomeDir()
 		cobra.CheckErr(err)
 
-		// Search config in home directory with name ".polygon-cli" (without extension).
+		// Search config in home directory with name ".dxp-cli" (without extension).
 		viper.AddConfigPath(home)
 		viper.SetConfigType("yaml")
-		viper.SetConfigName(".polygon-cli")
+		viper.SetConfigName(".dxp-cli")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
@@ -80,13 +80,13 @@ func initConfig() {
 	}
 }
 
-// NewPolycliCommand creates the `polycli` command.
-func NewPolycliCommand() *cobra.Command {
+// NewDxpcliCommand creates the `dxpcli` command.
+func NewDxpcliCommand() *cobra.Command {
 	// Parent command to which all subcommands are added.
 	cmd := &cobra.Command{
-		Use:   "polycli",
+		Use:   "dxpcli",
 		Short: "A Swiss Army knife of blockchain tools.",
-		Long:  "Polycli is a collection of tools that are meant to be useful while building, testing, and running block chain applications.",
+		Long:  "Dxpcli is a collection of tools that are meant to be useful while building, testing, and running block chain applications.",
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 			util.SetLogLevel(verbosity)
 			logMode := util.JSON
@@ -98,7 +98,7 @@ func NewPolycliCommand() *cobra.Command {
 	}
 
 	// Define flags and configuration settings.
-	cmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.polygon-cli.yaml)")
+	cmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.dxp-cli.yaml)")
 	cmd.PersistentFlags().IntVarP(&verbosity, "verbosity", "v", 500, "0 - Silent\n100 Panic\n200 Fatal\n300 Error\n400 Warning\n500 Info\n600 Debug\n700 Trace")
 	cmd.PersistentFlags().BoolVar(&pretty, "pretty-logs", true, "Should logs be in pretty format or JSON")
 

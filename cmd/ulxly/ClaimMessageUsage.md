@@ -41,7 +41,7 @@ function claimMessage(
 
 [Here](https://github.com/0xPolygonHermez/zkevm-contracts/blob/c8659e6282340de7bdb8fdbf7924a9bd2996bc98/contracts/v2/PolygonZkEVMBridgeV2.sol#L588-L623) is a link to the source code.
 
-This command is essentially identical to `claim asset`, but it's specific to deposits that are of the message leaf type rather than assets. In order to use this command, I'm going to try to claim one of the messages that I sent while testing `polycli ulxly bridge message`.
+This command is essentially identical to `claim asset`, but it's specific to deposits that are of the message leaf type rather than assets. In order to use this command, I'm going to try to claim one of the messages that I sent while testing `dxpcli ulxly bridge message`.
 
 ```bash
 curl -s https://bridge-api.cardona.zkevm-rpc.com/bridges/0xC92AeF5873d058a76685140F3328B0DED79733Af | jq '.'
@@ -71,7 +71,7 @@ This will show me the deposits that are destined for the test contract that I de
 I'm going to use this command to try to claim this message on L2.
 
 ```bash
-polycli ulxly claim message \
+dxpcli ulxly claim message \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --bridge-service-url https://bridge-api.cardona.zkevm-rpc.com \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \

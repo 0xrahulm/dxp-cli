@@ -68,7 +68,7 @@ In the output of the above command, I can see a deposit that looks like this:
 If we want to claim this deposit, we can use a command like this:
 
 ```bash
-polycli ulxly claim asset \
+dxpcli ulxly claim asset \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --bridge-service-url https://bridge-api.cardona.zkevm-rpc.com \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \

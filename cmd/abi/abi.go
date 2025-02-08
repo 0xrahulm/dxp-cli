@@ -5,8 +5,8 @@ import (
 
 	_ "embed"
 
-	"github.com/0xPolygon/polygon-cli/cmd/abi/decode"
-	"github.com/0xPolygon/polygon-cli/cmd/abi/encode"
+	"github.com/0xrahulm/dxp-cli/cmd/abi/decode"
+	"github.com/0xrahulm/dxp-cli/cmd/abi/encode"
 )
 
 var (

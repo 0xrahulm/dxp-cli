@@ -27,7 +27,7 @@ import (
 	ethclient "github.com/ethereum/go-ethereum/ethclient"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/0xPolygon/polygon-cli/bindings/ulxly"
+	"github.com/0xrahulm/dxp-cli/bindings/ulxly"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

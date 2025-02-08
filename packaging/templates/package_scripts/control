@@ -1,12 +1,12 @@
-Source: polygon-cli
+Source: dxp-cli
 Version: 0.3.5-beta
 Section: main
 Priority: standard
-Maintainer: Polygon <release-team@polygon.technology>
+Maintainer: Dexponent <contributors@dexponent.com>
 Build-Depends: debhelper-compat (= 13)
-Package: polygon-cli
+Package: dxp-cli
 Rules-Requires-Root: yes
 Architecture: amd64
 Multi-Arch: foreign
 Depends:
-Description: A Swiss Army knife of blockchain tools (from Polygon Technology).
+Description: A fork of PolyCli by Polygon Technology

@@ -1,4 +1,4 @@
-Currently, polycli only supports signing transactions. Message and arbitrary signing might happen in the future. In order to sign as message we first need to create some transaction data in a JSON file
+Currently, dxpcli only supports signing transactions. Message and arbitrary signing might happen in the future. In order to sign as message we first need to create some transaction data in a JSON file
 
 ```json
 {
@@ -25,9 +25,9 @@ Assuming we have valid transaction data in `tx.json` we can sign the transaction
 
 ### Signing with Hex Key
 
-This is the easiest, but least secure way to sign. In this case, we're providing a private key as a command line argument to polycli and using that to sign the transaction data. The signed transaction is written to `stdout`
+This is the easiest, but least secure way to sign. In this case, we're providing a private key as a command line argument to dxpcli and using that to sign the transaction data. The signed transaction is written to `stdout`
 ```bash
-polycli signer sign --private-key $(cat private-key.txt) --data-file tx.json  --chain-id 1337 | jq '.'
+dxpcli signer sign --private-key $(cat private-key.txt) --data-file tx.json  --chain-id 1337 | jq '.'
 ```
 
 This is the output that is generated. `signedTx` is the JSON formatted transaction which is readable but not readily usable. The `rawSignedTx` can be directly published.
@@ -61,7 +61,7 @@ This is the output that is generated. `signedTx` is the JSON formatted transacti
 Signing with a keystore requires that you specify the `--keystore` location and the `--key-id` which in this case is the address of the key that you'd like to use for signing
 
 ```bash
-polycli signer sign --keystore /tmp/keystore --key-id 0x58ce4bE73Ee7D0dee75395Ef662e98F91AD2E740 --data-file tx.json --chain-id 1337
+dxpcli signer sign --keystore /tmp/keystore --key-id 0x58ce4bE73Ee7D0dee75395Ef662e98F91AD2E740 --data-file tx.json --chain-id 1337
 ```
 
 ### Signing with GCP KMS
@@ -69,7 +69,7 @@ polycli signer sign --keystore /tmp/keystore --key-id 0x58ce4bE73Ee7D0dee75395Ef
 The syntax for signing with KMS should look familiar.
 
 ```bash
-# polycli assumes that there is default login that's been done already
+# dxpcli assumes that there is default login that's been done already
 gcloud auth application-default login
-polycli signer sign --kms GCP --gcp-project-id prj-polygonlabs-devtools-dev --key-id jhilliard-trash --data-file tx.json --chain-id 1337
+dxpcli signer sign --kms GCP --gcp-project-id prj-polygonlabs-devtools-dev --key-id jhilliard-trash --data-file tx.json --chain-id 1337
 ```

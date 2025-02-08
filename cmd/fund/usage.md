@@ -2,14 +2,14 @@ Bulk fund crypto wallets automatically.
 
 ```bash
 # Fund wallets specified by the user.
-$ polycli fund --addresses=0x5eD3BE7a1cDafd558F88a673345889dC75837aA2,0x1Ec6efdBd371D6444779eAE7B7e16907e0c8eC27
+$ dxpcli fund --addresses=0x5eD3BE7a1cDafd558F88a673345889dC75837aA2,0x1Ec6efdBd371D6444779eAE7B7e16907e0c8eC27
 3:58PM INF Starting bulk funding wallets
 3:58PM INF Using addresses provided by the user
 3:58PM INF Wallet(s) funded! 💸
 3:58PM INF Total execution time: 1.020693583s
 
 # Fund 20 random wallets using a pre-deployed contract address.
-$ polycli fund --number=20 --contract-address=0xf5a73e7cfcc83b7e8ce2e17eb44f050e8071ee60
+$ dxpcli fund --number=20 --contract-address=0xf5a73e7cfcc83b7e8ce2e17eb44f050e8071ee60
 3:58PM INF Starting bulk funding wallets
 3:58PM INF Deriving wallets from the default mnemonic
 3:58PM INF Wallet(s) derived count=20
@@ -17,7 +17,7 @@ $ polycli fund --number=20 --contract-address=0xf5a73e7cfcc83b7e8ce2e17eb44f050e
 3:58PM INF Total execution time: 396.814917ms
 
 # Fund 20 random wallets.
-$ polycli fund --number 20 --hd-derivation=false
+$ dxpcli fund --number 20 --hd-derivation=false
 3:58PM INF Starting bulk funding wallets
 3:58PM INF Generating random wallets
 3:58PM INF Wallet(s) generated count=20

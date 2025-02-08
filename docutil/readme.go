@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// updateReadmeCommands will update the list of `polycli` commands.
+// updateReadmeCommands will update the list of `dxpcli` commands.
 // The section is identified by the HTML tags `<startTag></endTag>“.
 func updateReadmeCommands(cmd *cobra.Command, delimiter, docDir string) error {
 	// Generate the list of commands.

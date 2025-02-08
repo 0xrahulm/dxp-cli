@@ -4,14 +4,14 @@ events that are provided.
 Example usage:
 
 ```bash
-polycli ulxly proof \
+dxpcli ulxly proof \
         --file-name cardona-4880876-to-6028159.ndjson \
         --deposit-count 24386 | jq '.'
 ```
 
 In this case we are assuming we have a file
 `cardona-4880876-to-6028159.ndjson` that would have been generated
-with a call to `polycli ulxly get-deposits`. The output will be the
+with a call to `dxpcli ulxly get-deposits`. The output will be the
 sibling hashes necessary to prove inclusion of deposit `24386`.
 
 This is a real verifiable deposit if you'd like to sanity check:
@@ -20,7 +20,7 @@ This is a real verifiable deposit if you'd like to sanity check:
 - Mainnet Root: `4516CA2A793B8E20F56EC6BA8CA6033A672330670A3772F76F2ADE9BC2125150`
 - Actual Claim Tx: https://cardona-zkevm.polygonscan.com/tx/0x5d4fbaca896f015801f1049b383932eaa9363d344c36b1c51e5f2e3ce20f9dc3
 
-This is the proof response from polycli:
+This is the proof response from dxpcli:
 
 ```json
 {

@@ -5,7 +5,7 @@ import (
 
 	_ "embed"
 
-	"github.com/0xPolygon/polygon-cli/dashboard"
+	"github.com/0xrahulm/dxp-cli/dashboard"
 	"github.com/spf13/cobra"
 )
 
@@ -61,8 +61,8 @@ func init() {
 	// and all subcommands, e.g.:
 	inputMetricsToDashFile = MetricsToDashCmd.PersistentFlags().StringP("input-file", "i", "", "the metrics file to be used")
 	inputMetricsToDashPrefix = MetricsToDashCmd.PersistentFlags().StringP("prefix", "p", "", "prefix to use before all metrics")
-	inputMetricsToDashTitle = MetricsToDashCmd.PersistentFlags().StringP("title", "t", "Polycli Dashboard", "title for the dashboard")
-	inputMetricsToDashDesc = MetricsToDashCmd.PersistentFlags().StringP("desc", "d", "Polycli Dashboard", "description for the dashboard")
+	inputMetricsToDashTitle = MetricsToDashCmd.PersistentFlags().StringP("title", "t", "Dxpcli Dashboard", "title for the dashboard")
+	inputMetricsToDashDesc = MetricsToDashCmd.PersistentFlags().StringP("desc", "d", "Dxpcli Dashboard", "description for the dashboard")
 	inputMetricsToDashWidth = MetricsToDashCmd.PersistentFlags().IntP("width", "W", 4, "widget width")
 	inputMetricsToDashHeight = MetricsToDashCmd.PersistentFlags().IntP("height", "H", 3, "widget height")
 

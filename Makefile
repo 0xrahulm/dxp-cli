@@ -3,17 +3,17 @@ include scripts/clients.mk
 .DEFAULT_GOAL := help
 
 INSTALL_DIR := ~/go/bin
-BIN_NAME := polycli
+BIN_NAME := dxpcli
 BUILD_DIR := ./out
 
 GIT_SHA := $(shell git rev-parse HEAD | cut -c 1-8)
 GIT_TAG := $(shell git describe --tags)
 DATE := $(shell date +%s)
 VERSION_FLAGS=\
-  -X github.com/0xPolygon/polygon-cli/cmd/version.Version=$(GIT_TAG) \
-  -X github.com/0xPolygon/polygon-cli/cmd/version.Commit=$(GIT_SHA) \
-  -X github.com/0xPolygon/polygon-cli/cmd/version.Date=$(DATE) \
-  -X github.com/0xPolygon/polygon-cli/cmd/version.BuiltBy=makefile
+  -X github.com/0xrahulm/dxp-cli/cmd/version.Version=$(GIT_TAG) \
+  -X github.com/0xrahulm/dxp-cli/cmd/version.Commit=$(GIT_SHA) \
+  -X github.com/0xrahulm/dxp-cli/cmd/version.Date=$(DATE) \
+  -X github.com/0xrahulm/dxp-cli/cmd/version.BuiltBy=makefile
 
 .PHONY: help
 help: ## Display this help.
@@ -30,8 +30,8 @@ build: $(BUILD_DIR) ## Build go binary.
 	go build -ldflags "$(VERSION_FLAGS)" -o $(BUILD_DIR)/$(BIN_NAME) main.go
 
 .PHONY: build-docker
-build-docker: ## Builds a docker image with the polycli binary
-	docker build -t polycli -f ./Dockerfile .
+build-docker: ## Builds a docker image with the dxpcli binary
+	docker build -t dxpcli -f ./Dockerfile .
 
 .PHONY: install
 install: build ## Install the go binary.
@@ -82,7 +82,7 @@ test: ## Run tests.
 gen: gen-doc gen-proto gen-go-bindings gen-loadtest-modes gen-json-rpctypes ## Generate everything.
 
 .PHONY: gen-doc
-gen-doc: ## Generate documentation for `polycli`.
+gen-doc: ## Generate documentation for `dxpcli`.
 	go run docutil/*.go
 
 .PHONY: gen-proto

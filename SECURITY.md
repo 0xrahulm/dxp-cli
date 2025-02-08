@@ -1,3 +1,4 @@
+# This is a Fork from Polycli, plese report the security issues to the polygon team, it will be updated in this repo as well.
 # Polygon Technology Security Information
 
 ## Link to vulnerability disclosure details (Bug Bounty).

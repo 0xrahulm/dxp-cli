@@ -9,8 +9,8 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/0xPolygon/polygon-cli/bindings/uniswapv3"
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/bindings/uniswapv3"
+	"github.com/0xrahulm/dxp-cli/util"
 	"github.com/rs/zerolog/log"
 )
 

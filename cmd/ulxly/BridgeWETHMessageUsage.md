@@ -23,7 +23,7 @@ function bridgeMessageWETH(
 Assuming the network is configured with a gas token, you could call this method like this:
 
 ```bash
-polycli ulxly bridge weth \
+dxpcli ulxly bridge weth \
         --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
         --destination-address 0x3878Cff9d621064d393EEF92bF1e12A944c5ba84 \
         --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \

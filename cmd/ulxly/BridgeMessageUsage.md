@@ -1,4 +1,4 @@
-This command is very similar to `polycli ulxly bridge asset`, but instead this is a more generic interface that can be used to transfer ETH and make a contract call. This is the underlying solidity interface that we're  referencing.
+This command is very similar to `dxpcli ulxly bridge asset`, but instead this is a more generic interface that can be used to transfer ETH and make a contract call. This is the underlying solidity interface that we're  referencing.
 
 ```solidity
 /**
@@ -22,7 +22,7 @@ The source code for this particular method is [here](https://github.com/0xPolygo
 Below is a simple example of using this command to bridge a small amount of ETH from Sepolia (L1) to Cardona (L2). In this case, we're not including any call data, so it's essentially equivalent to a `bridge asset` call, but the deposit will not be automatically claimed on L2.
 
 ```bash
-polycli ulxly bridge message \
+dxpcli ulxly bridge message \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \
     --destination-network 1 \
@@ -34,7 +34,7 @@ polycli ulxly bridge message \
 
 In most cases, you'll want to specify some `call-data` and a `destination-address` in order for a contract to be called on the destination chain. For example:
 ```bash
-polycli ulxly bridge message \
+dxpcli ulxly bridge message \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \
     --destination-network 1 \

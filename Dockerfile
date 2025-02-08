@@ -12,14 +12,14 @@ RUN go mod download
 COPY . ./
 
 # Build the Go binary
-RUN go build -o /workspace/polycli main.go
+RUN go build -o /workspace/dxpcli main.go
 
 # Final stage: minimal base image
 FROM --platform=${BUILDPLATFORM} debian:bookworm-slim
 
 # Copy only the necessary files from the builder image
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-COPY --from=builder /workspace/polycli /usr/bin/polycli
+COPY --from=builder /workspace/dxpcli /usr/bin/dxpcli
 
 # Default cmd for the container
-ENTRYPOINT ["polycli"]
+ENTRYPOINT ["dxpcli"]

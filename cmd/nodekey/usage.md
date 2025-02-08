@@ -7,19 +7,19 @@ have the output be structured.
 
 ```bash
 # This will generate a secp256k1 key for devp2p protocol.
-$ polycli nodekey
+$ dxpcli nodekey
 
 # Generate a networking keypair for libp2p.
-$ polycli nodekey --protocol libp2p
+$ dxpcli nodekey --protocol libp2p
 
 # Generate a networking keypair for edge.
-$ polycli nodekey --protocol libp2p --key-type secp256k1 --marshal-protobuf
+$ dxpcli nodekey --protocol libp2p --key-type secp256k1 --marshal-protobuf
 ```
 
 Generate an [ED25519](https://en.wikipedia.org/wiki/Curve25519) nodekey from a private key (in hex format).
 
 ```bash
-polycli nodekey --private-key 2a4ae8c4c250917781d38d95dafbb0abe87ae2c9aea02ed7c7524685358e49c2 | jq
+dxpcli nodekey --private-key 2a4ae8c4c250917781d38d95dafbb0abe87ae2c9aea02ed7c7524685358e49c2 | jq
 ```
 
 ```json
@@ -33,7 +33,7 @@ polycli nodekey --private-key 2a4ae8c4c250917781d38d95dafbb0abe87ae2c9aea02ed7c7
 Generate an [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) nodekey from a private key (in hex format).
 
 ```bash
-polycli nodekey --private-key 2a4ae8c4c250917781d38d95dafbb0abe87ae2c9aea02ed7c7524685358e49c2 --key-type secp256k1 | jq
+dxpcli nodekey --private-key 2a4ae8c4c250917781d38d95dafbb0abe87ae2c9aea02ed7c7524685358e49c2 --key-type secp256k1 | jq
 ```
 
 ```json

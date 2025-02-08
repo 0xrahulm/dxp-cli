@@ -1,4 +1,4 @@
-module github.com/0xPolygon/polygon-cli
+module github.com/0xrahulm/dxp-cli
 
 go 1.22.7
 

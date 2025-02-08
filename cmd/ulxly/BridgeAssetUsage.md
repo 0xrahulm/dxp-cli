@@ -29,7 +29,7 @@ The source of this method is [here](https://github.com/0xPolygonHermez/zkevm-con
 Below is an example of how we would make simple bridge of native ETH from Sepolia (L1) into Cardona (L2).
 
 ```bash
-polycli ulxly bridge asset \
+dxpcli ulxly bridge asset \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \
     --destination-network 1 \
@@ -42,7 +42,7 @@ polycli ulxly bridge asset \
 Here is another example that will bridge a [test ERC20 token](https://sepolia.etherscan.io/address/0xC92AeF5873d058a76685140F3328B0DED79733Af) from Sepolia (L1) into Cardona (L2). In order for this to work, the token would need to have an [approval](https://sepolia.etherscan.io/tx/0x028513b13a2a7899de4db56e60d1dad66c7b7e29f91c54f385fdfdfc8f14b8b4#eventlog) for the bridge to spend tokens for that particular user.
 
 ```bash
-polycli ulxly bridge asset \
+dxpcli ulxly bridge asset \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \
     --destination-network 1 \
@@ -58,7 +58,7 @@ Assuming you have funds on L2, a bridge from L2 to L1 looks pretty much the same
 The command below will bridge `123456` of the native ETH on Cardona (L2) back to network 0 which corresponds to Sepolia (L1).
 
 ```bash
-polycli ulxly bridge asset \
+dxpcli ulxly bridge asset \
     --bridge-address 0x528e26b25a34a4A5d0dbDa1d57D318153d2ED582 \
     --private-key 0x32430699cd4f46ab2422f1df4ad6546811be20c9725544e99253a887e971f92b \
     --destination-network 0 \

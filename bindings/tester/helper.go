@@ -13,7 +13,7 @@ import (
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/util"
 	"github.com/rs/zerolog/log"
 )
 
@@ -21,7 +21,7 @@ import (
 // solc, the solidity compiler commandline interface
 // Version: 0.8.15+commit.e14f2714.Darwin.appleclang
 // solc LoadTester.sol --bin --abi -o . --overwrite
-// From within `polygon-cli/contracts/loadtester` directory:
+// From within `dxp-cli/contracts/loadtester` directory:
 // ~/code/go-ethereum/build/bin/abigen --abi LoadTester.abi --pkg contracts --type LoadTester --bin LoadTester.bin --out ../loadtester.go
 
 //go:embed LoadTester.bin

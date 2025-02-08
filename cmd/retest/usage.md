@@ -31,7 +31,7 @@ jq 'walk(if type == "object" then with_entries(select(.key | startswith("//") | 
 Now we should have a giant file filled with an array of transactions. We can take that output and process it witht the `retest` command now
 
 ```bash
-polycli retest -v 500 --file merged.nocomment.json > simple.json
+dxpcli retest -v 500 --file merged.nocomment.json > simple.json
 ```
 
 ## LLLC

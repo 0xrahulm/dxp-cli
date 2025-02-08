@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0xPolygon/polygon-cli/metrics"
-	"github.com/0xPolygon/polygon-cli/rpctypes"
+	"github.com/0xrahulm/dxp-cli/metrics"
+	"github.com/0xrahulm/dxp-cli/rpctypes"
 	ethcommon "github.com/ethereum/go-ethereum/common"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 	ui "github.com/gizak/termui/v3"

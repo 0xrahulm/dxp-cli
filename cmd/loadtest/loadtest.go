@@ -23,13 +23,13 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 	"github.com/holiman/uint256"
 
-	"github.com/0xPolygon/polygon-cli/bindings/tester"
-	"github.com/0xPolygon/polygon-cli/bindings/tokens"
-	uniswapv3loadtest "github.com/0xPolygon/polygon-cli/cmd/loadtest/uniswapv3"
+	"github.com/0xrahulm/dxp-cli/bindings/tester"
+	"github.com/0xrahulm/dxp-cli/bindings/tokens"
+	uniswapv3loadtest "github.com/0xrahulm/dxp-cli/cmd/loadtest/uniswapv3"
 
-	"github.com/0xPolygon/polygon-cli/abi"
-	"github.com/0xPolygon/polygon-cli/rpctypes"
-	"github.com/0xPolygon/polygon-cli/util"
+	"github.com/0xrahulm/dxp-cli/abi"
+	"github.com/0xrahulm/dxp-cli/rpctypes"
+	"github.com/0xrahulm/dxp-cli/util"
 
 	ethereum "github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
@@ -52,7 +52,7 @@ const (
 	// If you add a new constant, it fill fail to compile until you regenerate the strings.
 	// There are two steps needed:
 	// 1. Install stringer: `go install golang.org/x/tools/cmd/stringer`.
-	// 2. Generate the string: `go generate github.com/0xPolygon/polygon-cli/cmd/loadtest`.
+	// 2. Generate the string: `go generate github.com/0xrahulm/dxp-cli/cmd/loadtest`.
 	// You can also use `make gen-loadtest-modes`.
 	loadTestModeERC20 loadTestMode = iota
 	loadTestModeERC721

@@ -32,7 +32,7 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 	"github.com/google/tink/go/kwp/subtle"
 	"github.com/manifoldco/promptui"
-	"github.com/0xPolygon/polygon-cli/gethkeystore"
+	"github.com/0xrahulm/dxp-cli/gethkeystore"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"google.golang.org/api/iterator"
@@ -855,7 +855,7 @@ func init() {
 	inputSignerOpts.gcpProjectID = SignerCmd.PersistentFlags().String("gcp-project-id", "", "The GCP Project ID to use")
 	inputSignerOpts.gcpRegion = SignerCmd.PersistentFlags().String("gcp-location", "europe-west2", "The GCP Region to use")
 	// What is dead may never die https://cloud.google.com/kms/docs/faq#cannot_delete
-	inputSignerOpts.gcpKeyRingID = SignerCmd.PersistentFlags().String("gcp-keyring-id", "polycli-keyring", "The GCP Keyring ID to be used")
+	inputSignerOpts.gcpKeyRingID = SignerCmd.PersistentFlags().String("gcp-keyring-id", "dxpcli-keyring", "The GCP Keyring ID to be used")
 	inputSignerOpts.gcpImportJob = SignerCmd.PersistentFlags().String("gcp-import-job-id", "", "The GCP Import Job ID to use when importing a key")
 	inputSignerOpts.gcpKeyVersion = SignerCmd.PersistentFlags().Int("gcp-key-version", 1, "The GCP crypto key version to use")
 }

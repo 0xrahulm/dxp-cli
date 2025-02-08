@@ -152,7 +152,7 @@ jobs:
 
       - name: Install dependencies
         run: go get
-      - name: Install polycli using go
+      - name: Install dxpcli using go
         run: go install
-      - name: Check that polycli has been installed
-        run: polygon-cli version
+      - name: Check that dxpcli has been installed
+        run: dxp-cli version
